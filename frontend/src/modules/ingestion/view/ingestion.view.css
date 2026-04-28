@@ -1,0 +1,148 @@
+.ingestion-view {
+  min-height: 100vh;
+  padding: 28px;
+  color: #edf5dc;
+  font-family: 'Trebuchet MS', 'Gill Sans MT', 'Lucida Sans', sans-serif;
+  background: radial-gradient(circle at 20% 15%, rgba(112, 173, 55, 0.2), transparent 35%),
+    url('/fondo.png') center/cover no-repeat;
+}
+
+.ingestion-panel {
+  max-width: 980px;
+  margin: 0 auto;
+  border: 1px solid rgba(210, 236, 178, 0.35);
+  background: rgba(15, 52, 23, 0.68);
+  border-radius: 18px;
+  padding: 22px;
+  backdrop-filter: blur(8px);
+}
+
+.ingestion-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.ingestion-card {
+  border: 1px solid rgba(196, 231, 156, 0.35);
+  border-radius: 14px;
+  padding: 14px;
+  background: rgba(70, 112, 52, 0.2);
+}
+
+.ingestion-card label,
+.ingestion-card input,
+.ingestion-card select {
+  display: block;
+  width: 100%;
+}
+
+.ingestion-card input,
+.ingestion-card select {
+  margin-top: 6px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(190, 232, 144, 0.45);
+  background: rgba(28, 64, 33, 0.82);
+  color: #f2f6e6;
+  padding: 10px 12px;
+}
+
+.ingestion-card button {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 700;
+  color: #edf6da;
+  background: linear-gradient(180deg, #8ed33e 0%, #5fa728 100%);
+  cursor: pointer;
+}
+
+.ingestion-state {
+  margin-top: 18px;
+  border-top: 1px solid rgba(196, 231, 156, 0.3);
+  padding-top: 16px;
+}
+
+.ingestion-auto {
+  margin-top: 16px;
+  border-top: 1px solid rgba(196, 231, 156, 0.3);
+  padding-top: 16px;
+}
+
+.ingestion-auto h2 {
+  margin: 0 0 8px;
+}
+
+.ingestion-auto p {
+  margin: 6px 0;
+}
+
+.ingestion-auto__actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ingestion-auto__actions button {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 700;
+  color: #edf6da;
+  background: linear-gradient(180deg, #8ed33e 0%, #5fa728 100%);
+  cursor: pointer;
+}
+
+.ingestion-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.ingestion-pill.on { background: rgba(142, 211, 62, 0.9); color: #14310f; }
+.ingestion-pill.off { background: rgba(42, 74, 33, 0.9); color: #e9f2d5; }
+
+.ingestion-ok { color: #c2ef87; }
+.ingestion-error { color: #ffd7d7; }
+
+.ingestion-traffic {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.light-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  box-shadow: 0 0 0 2px rgba(9, 20, 9, 0.4);
+}
+
+.light-dot.green {
+  background: #94f74b;
+  box-shadow: 0 0 10px rgba(148, 247, 75, 0.85);
+}
+
+.light-dot.red {
+  background: #ff5b5b;
+  box-shadow: 0 0 10px rgba(255, 91, 91, 0.75);
+}
+
+.ingestion-pill.pulse {
+  animation: pulse-on 1.2s ease-out;
+}
+
+@keyframes pulse-on {
+  0% { transform: scale(1); box-shadow: 0 0 0 rgba(154, 227, 77, 0.1); }
+  30% { transform: scale(1.05); box-shadow: 0 0 20px rgba(154, 227, 77, 0.55); }
+  100% { transform: scale(1); box-shadow: 0 0 0 rgba(154, 227, 77, 0.1); }
+}
+
+@media (max-width: 860px) {
+  .ingestion-grid { grid-template-columns: 1fr; }
+}

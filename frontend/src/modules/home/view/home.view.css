@@ -1,0 +1,426 @@
+.home-view {
+  min-height: 100dvh;
+  height: 100dvh;
+  padding: 0.55rem;
+  overflow: hidden;
+  background-image:
+    radial-gradient(circle at 30% 20%, rgba(222, 246, 183, 0.22), transparent 42%),
+    linear-gradient(180deg, rgba(3, 18, 9, 0.72), rgba(2, 11, 6, 0.84)),
+    url('/fondo.png');
+  background-size: cover;
+  background-position: center;
+  color: #edf5dd;
+  font-family: 'Trebuchet MS', 'Gill Sans MT', 'Lucida Sans', sans-serif;
+}
+
+.home-shell {
+  height: calc(100dvh - 1.1rem);
+  border-radius: 0.9rem;
+  overflow: hidden;
+  border: 1px solid rgba(203, 235, 157, 0.35);
+  background: rgba(18, 51, 27, 0.38);
+  box-shadow: 0 12px 32px rgba(2, 14, 7, 0.55);
+  backdrop-filter: blur(5px);
+  display: grid;
+  grid-template-columns: 16.2rem 1fr;
+}
+
+.home-sidebar {
+  border-right: 1px solid rgba(190, 224, 141, 0.2);
+  background: linear-gradient(180deg, rgba(25, 66, 34, 0.45), rgba(16, 40, 22, 0.55));
+  padding: 0.8rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.72rem;
+}
+
+.home-sidebar__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding-inline: 0.4rem;
+}
+
+.home-sidebar__brand img {
+  width: 2.1rem;
+  filter: drop-shadow(0 0.3rem 0.45rem rgba(0, 0, 0, 0.35));
+}
+
+.home-sidebar__brand strong {
+  font-size: 2.1rem;
+  line-height: 1;
+  letter-spacing: 0.02rem;
+}
+
+.home-sidebar__menu {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.home-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.62rem;
+  min-height: 2.2rem;
+  border-radius: 0.55rem;
+  border: 1px solid transparent;
+  background: transparent;
+  color: rgba(235, 245, 221, 0.94);
+  font-size: 1.6rem;
+  text-align: left;
+  padding: 0 0.6rem;
+  cursor: pointer;
+}
+
+.home-menu-item svg {
+  width: 0.95rem;
+  height: 0.95rem;
+}
+
+.home-menu-item--active {
+  background: linear-gradient(90deg, rgba(146, 200, 78, 0.3), rgba(108, 168, 54, 0.22));
+  border-color: rgba(201, 236, 154, 0.32);
+}
+
+.home-sidebar__mode {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.62rem;
+  border-radius: 0.72rem;
+  border: 1px solid rgba(189, 221, 145, 0.35);
+  background: rgba(13, 29, 17, 0.42);
+  padding: 0.62rem;
+}
+
+.home-sidebar__mode svg {
+  width: 1.22rem;
+  height: 1.22rem;
+  color: #b7e56f;
+}
+
+.home-sidebar__mode span {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.7rem;
+  line-height: 1.06;
+}
+
+.home-sidebar__mode small {
+  font-size: 1.26rem;
+  color: rgba(225, 242, 199, 0.8);
+}
+
+.home-sidebar__logout {
+  border: 1px solid rgba(201, 232, 158, 0.36);
+  border-radius: 0.6rem;
+  background: rgba(32, 65, 35, 0.45);
+  color: #e8f7d5;
+  min-height: 2rem;
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+
+.home-content {
+  padding: 0.68rem 0.85rem 0.72rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.58rem;
+  overflow: hidden;
+}
+
+.home-topbar {
+  border-radius: 0.58rem;
+  border: 1px solid rgba(185, 220, 137, 0.33);
+  background: rgba(27, 67, 33, 0.34);
+  min-height: 2.65rem;
+  padding: 0.44rem 0.68rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home-topbar__title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.46rem;
+  font-size: 1.8rem;
+}
+
+.home-topbar__title svg {
+  width: 0.95rem;
+  height: 0.95rem;
+}
+
+.home-topbar__user {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.52rem;
+  font-size: 0.96rem;
+}
+
+.home-avatar {
+  width: 1.74rem;
+  height: 1.74rem;
+  border-radius: 999px;
+  border: 1px solid rgba(204, 236, 162, 0.55);
+  background: radial-gradient(circle at 30% 30%, #d9f58d, #4e8f35);
+  display: grid;
+  place-items: center;
+  color: rgba(12, 25, 10, 0.88);
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.home-content__headline {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.6rem;
+}
+
+.home-content__headline h1 {
+  margin: 0;
+  font-size: clamp(1.45rem, 2.55vw, 2.1rem);
+  letter-spacing: 0.02rem;
+  line-height: 1.06;
+}
+
+.home-error {
+  margin: 0;
+  border: 1px solid rgba(255, 176, 168, 0.6);
+  background: rgba(98, 30, 26, 0.34);
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.55rem;
+  color: #ffd9d4;
+  font-size: 0.88rem;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.home-card {
+  border-radius: 0.72rem;
+  border: 1px solid rgba(190, 224, 142, 0.4);
+  background:
+    linear-gradient(145deg, rgba(163, 203, 122, 0.2), rgba(48, 88, 38, 0.3)),
+    rgba(45, 78, 36, 0.22);
+  box-shadow: inset 0 0 0 1px rgba(247, 255, 237, 0.08);
+  padding: 0.68rem 0.8rem;
+}
+
+.home-card h2 {
+  margin: 0 0 0.44rem;
+  font-size: clamp(1.08rem, 1.6vw, 1.45rem);
+  font-weight: 600;
+}
+
+.home-card__body {
+  display: flex;
+  align-items: center;
+  gap: 0.66rem;
+}
+
+.home-card__body svg {
+  width: 3.8rem;
+  height: 3.8rem;
+  color: #b6e86b;
+}
+
+.home-card__body--spread {
+  justify-content: space-between;
+}
+
+.home-card__value {
+  margin: 0;
+  font-size: clamp(2rem, 2.7vw, 2.9rem);
+  line-height: 1;
+  font-weight: 800;
+}
+
+.home-chip {
+  display: inline-block;
+  margin-top: 0.25rem;
+  padding: 0.22rem 0.52rem;
+  border-radius: 0.4rem;
+  background: rgba(121, 186, 55, 0.6);
+  color: #eefbe2;
+  font-size: 1.3rem;
+}
+
+.home-card__sub {
+  color: rgba(224, 240, 199, 0.85);
+  font-size: 1.45rem;
+}
+
+.home-card--lux .home-card__body svg,
+.home-card--energy .home-card__body svg {
+  width: 6.1rem;
+  height: 3.35rem;
+  color: #caec89;
+}
+
+.home-controls {
+  border-radius: 0.72rem;
+  border: 1px solid rgba(185, 219, 139, 0.35);
+  background: rgba(26, 58, 31, 0.34);
+  padding: 0.62rem 0.74rem;
+}
+
+.home-controls h2 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+}
+
+.home-controls__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.62rem;
+  align-items: center;
+}
+
+.home-toggle {
+  display: inline-grid;
+  grid-template-columns: repeat(2, minmax(6.6rem, 1fr));
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(184, 219, 136, 0.45);
+}
+
+.home-toggle button {
+  min-height: 2.35rem;
+  border: 0;
+  background: rgba(25, 53, 30, 0.45);
+  color: rgba(226, 241, 201, 0.9);
+  font-size: 1.9rem;
+  cursor: pointer;
+}
+
+.home-toggle .is-active {
+  background: linear-gradient(180deg, #99d647, #5ba92f);
+  color: #f3fde8;
+  font-weight: 700;
+}
+
+.home-action {
+  flex: 0 0 auto;
+  width: clamp(12.5rem, 30vw, 18rem);
+  min-height: 2.35rem;
+  border-radius: 0.62rem;
+  border: 1px solid rgba(189, 225, 146, 0.5);
+  background: linear-gradient(180deg, #98d545, #4f982d);
+  color: #f0fae2;
+  font-size: clamp(1rem, 1.3vw, 1.25rem);
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding-inline: 0.85rem;
+  cursor: pointer;
+}
+
+.home-action img {
+  width: 0.95rem;
+}
+
+.home-action svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.home-action--danger {
+  background: linear-gradient(180deg, #d64545, #a52f2f);
+  border-color: rgba(255, 182, 182, 0.45);
+  color: #ffffff;
+}
+
+.home-footer {
+  margin-top: auto;
+  color: rgba(226, 243, 200, 0.88);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+@media (max-width: 85rem) {
+  .home-view {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+  }
+
+  .home-shell {
+    height: auto;
+    min-height: calc(100dvh - 1.1rem);
+    grid-template-columns: 1fr;
+  }
+
+  .home-sidebar {
+    border-right: 0;
+    border-bottom: 1px solid rgba(190, 224, 141, 0.2);
+  }
+
+  .home-sidebar__mode {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 56rem) {
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-content__headline {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .home-topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.42rem;
+  }
+
+  .home-topbar__user {
+    font-size: 0.9rem;
+  }
+
+  .home-action {
+    width: 100%;
+  }
+}
+
+@media (max-height: 760px) {
+  .home-view {
+    padding: 0.4rem;
+  }
+
+  .home-shell {
+    height: calc(100dvh - 0.8rem);
+  }
+
+  .home-sidebar {
+    gap: 0.52rem;
+    padding: 0.58rem;
+  }
+
+  .home-menu-item {
+    min-height: 2rem;
+  }
+
+  .home-card {
+    padding: 0.56rem 0.65rem;
+  }
+
+  .home-card__body svg {
+    width: 3.3rem;
+    height: 3.3rem;
+  }
+
+  .home-controls {
+    padding: 0.54rem 0.62rem;
+  }
+}
