@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/sigar/',  // 🔥 esto es lo que te falta
+  // Railway serves the app from the domain root, not /sigar/
+  base: '/',
   plugins: [react()],
 })
